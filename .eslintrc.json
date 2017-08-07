@@ -1,0 +1,79 @@
+{
+  "extends": [
+    "plugin:lodash-fp/recommended",
+    "airbnb/base"
+  ],
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "plugins": [
+    "lodash-fp",
+    "promise"
+  ],
+  "parserOptions": {
+    "sourceType": "script",
+    "ecmaVersion": 8
+  },
+  "rules": {
+    "array-bracket-spacing": "off",
+    "arrow-parens": ["error", "as-needed", { "requireForBlockBody": false }],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "consistent-return": "off",
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "ignore"
+    }],
+    "func-names": "off",
+    "generator-star-spacing": ["error", "after"],
+    "global-require": "off",
+    "guard-for-in": "off",
+    "import/no-dynamic-require": "off",
+    "import/no-extraneous-dependencies": "off",
+    "indent": ["error", 2, { "CallExpression": { "arguments": "first" }, "SwitchCase": 1 }],
+    "max-len": "off",
+    "newline-per-chained-call": "off",
+    "no-continue": "off",
+    "no-multiple-empty-lines": "error",
+    "no-multiple-empty-lines": "off",
+    "no-param-reassign": ["error", {"props": false}],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-restricted-syntax": ["error", "ClassDeclaration"],
+    "no-underscore-dangle": "off",
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used" }],
+    "no-use-before-define": "off",
+    "one-var": ["error", { "uninitialized": "always", "initialized": "never" }],
+    "one-var-declaration-per-line": ["error", "initializations"],
+    "prefer-rest-params": "off",
+    "promise/always-return": "error",
+    "promise/catch-or-return": "error",
+    "promise/no-native": "off",
+    "promise/param-names": "error",
+    "require-yield": "off",
+    "semi": ["error", "never"],
+    "space-before-function-paren": ["error", {
+      "anonymous": "never",
+      "named": "never",
+      "asyncArrow": "always"
+    }],
+    "space-in-parens": "off",
+    "space-unary-ops": ["error", {
+      "words": true,
+      "nonwords": false,
+      "overrides": {
+        "!": true
+      }
+    }],
+    "strict": ["error", "global"],
+    "valid-jsdoc": "error"
+  },
+  "settings": {
+    "lodash": {
+      "pragma": "fp"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "@invisible/logger",
+  "version": "0.0.1",
+  "description": "Invisible Logging Wrapper",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint *.js **/*.js",
+    "prepublish": "npm run test",
+    "pretest": "npm run lint",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invisible-tech/logger.git"
+  },
+  "keywords": [
+    "log",
+    "winston",
+    "wrapper"
+  ],
+  "author": {
+    "email": "tng@invisible.email",
+    "name": "Invisible Technologies",
+    "url": "https://github.com/invisible-tech"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/invisible-tech/logger/issues"
+  },
+  "homepage": "https://github.com/invisible-tech/logger#readme",
+  "dependencies": {
+    "@google-cloud/logging-winston": "^0.5.0",
+    "bugsnag": "^1.12.0",
+    "glob": "^7.1.2",
+    "moment": "^2.18.1",
+    "winston": "^2.3.1",
+    "winston-bugsnag": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.4.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-formatter-list": "^1.0.0",
+    "eslint-formatter-pretty": "^1.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.0",
+    "eslint-plugin-lodash-fp": "^2.1.3",
+    "eslint-plugin-promise": "^3.5.0",
+    "mocha": "^3.5.0",
+    "sinon": "^3.0.0"
+  }
+}

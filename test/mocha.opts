@@ -1,0 +1,6 @@
+--colors
+--check-leaks
+--reporter dot
+--timeout 10000
+--ui bdd
+--globals ords,__coverage__
