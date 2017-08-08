@@ -18,7 +18,7 @@ if (NODE_ENV !== 'test') {
     timestamp: () => moment().format(),
     formatter: options => {
       const message = options.message
-      const meta = options.meta
+      const meta = (options.meta && Object.keys(options.meta).length)
         ? `\n${JSON.stringify(options.meta, null, 2)}`
         : ''
 
