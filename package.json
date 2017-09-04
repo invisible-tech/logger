@@ -7,7 +7,7 @@
     "lint": "eslint *.js **/*.js",
     "prepublish": "npm run test",
     "pretest": "npm run lint",
-    "test": "mocha"
+    "test": "NODE_ENV=test mocha"
   },
   "repository": {
     "type": "git",
