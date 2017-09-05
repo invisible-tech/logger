@@ -17,10 +17,6 @@ describe('library interface', () => {
     logger = require('../index.js')
   })
 
-  it('should load with the correct logging level', () => {
-    assert.equal(logger.transports.console.level, process.env.LOGGER_LEVEL)
-  })
-
   it('should load bugsnag transport if BUGSNAG_KEY is defined', () => {
     sinon.assert.called(bugsnag.register)
   })

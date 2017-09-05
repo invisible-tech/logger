@@ -9,7 +9,7 @@ machine:
     # For yarn
     PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
 
-    LOG_LEVEL: silly
+    LOGGER_LEVEL: silly
     NODE_ENV: test
     PORT: 3000
 
