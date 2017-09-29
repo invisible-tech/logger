@@ -1,13 +1,14 @@
 {
   "name": "@invisible/logger",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Invisible Logging Wrapper",
   "main": "index.js",
   "scripts": {
     "lint": "eslint *.js **/*.js",
     "prepublish": "npm run test",
     "pretest": "npm run lint",
-    "test": "NODE_ENV=test mocha"
+    "test": "NODE_ENV=test mocha",
+    "posttest": "assert-version-bump"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
   },
   "devDependencies": {
     "@invisible/eslint-config": "^1.0.0",
+    "@invisible/publish": "^1.1.6",
     "eslint": "^4.7.2",
     "mocha": "^3.5.0",
     "sinon": "^3.0.0"

@@ -79,6 +79,13 @@
     eslint-plugin-promise "^3.5.0"
     eslint-plugin-react "^7.3.0"
 
+"@invisible/publish@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@invisible/publish/-/publish-1.1.6.tgz#f9cdc613e9f5250b1f2afe4ceda9c8f137ecae88"
+  dependencies:
+    cross-spawn "^5.1.0"
+    lodash "^4.17.4"
+
 abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
