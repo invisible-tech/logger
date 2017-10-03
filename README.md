@@ -1,4 +1,7 @@
 # logger
+
+[![CircleCI](https://circleci.com/gh/invisible-tech/logger/tree/master.svg?style=svg)](https://circleci.com/gh/invisible-tech/logger/tree/master)
+
 Invisible Logging Wrapper.
 
 ### Install
