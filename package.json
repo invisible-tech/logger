@@ -1,11 +1,10 @@
 {
   "name": "@invisible/logger",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Invisible Logging Wrapper",
   "main": "index.js",
   "scripts": {
     "lint": "eslint *.js **/*.js",
-    "prepublish": "npm run test",
     "pretest": "npm run lint",
     "test": "NODE_ENV=test mocha",
     "posttest": "assert-version-bump"
