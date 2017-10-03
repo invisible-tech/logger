@@ -17,7 +17,7 @@ if (NODE_ENV !== 'test') {
     level: LOGGER_LEVEL,
     timestamp: () => moment().format(),
     formatter: options => {
-      const message = options.message
+      const { message } = options
       const meta = (options.meta && Object.keys(options.meta).length)
         ? `\n${JSON.stringify(options.meta, null, 2)}`
         : ''
