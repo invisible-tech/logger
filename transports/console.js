@@ -3,10 +3,14 @@
 const moment = require('moment')
 const winston = require('winston')
 
+const assertLevel = require('./helpers/assertLevel')
+
 const {
   LOGGER_LEVEL = 'info',
   NODE_ENV,
 } = process.env
+
+assertLevel(LOGGER_LEVEL, 'LOGGER_LEVEL invalid.')
 
 const colorize = NODE_ENV === 'development'
 
