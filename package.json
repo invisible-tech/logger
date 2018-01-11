@@ -1,6 +1,6 @@
 {
   "name": "@invisible/logger",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Invisible Logging Wrapper",
   "main": "index.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "glob": "^7.1.2",
     "moment": "^2.18.1",
     "winston": "^2.4.0",
-    "winston-bugsnag": "^3.0.0"
+    "winston-bugsnag": "^3.0.2"
   },
   "devDependencies": {
     "@invisible/eslint-config": "^1.1.2",
