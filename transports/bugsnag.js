@@ -14,7 +14,8 @@ assertLevel(BUGSNAG_LEVEL, 'BUGSNAG_LEVEL invalid.')
 
 let transport
 if (BUGSNAG_KEY) {
-  bugsnag.register(BUGSNAG_KEY)
+  const projectRoot = process.cwd()
+  bugsnag.register(BUGSNAG_KEY, { projectRoot })
 
   transport = new BugsnagTransport({
     name: 'bugsnag',
