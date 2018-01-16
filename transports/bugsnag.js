@@ -1,5 +1,6 @@
 'use strict'
 
+const path = require('path')
 const bugsnag = require('bugsnag')
 const { BugsnagTransport } = require('winston-bugsnag')
 
@@ -15,7 +16,8 @@ assertLevel(BUGSNAG_LEVEL, 'BUGSNAG_LEVEL invalid.')
 let transport
 if (BUGSNAG_KEY) {
   const projectRoot = process.cwd()
-  bugsnag.register(BUGSNAG_KEY, { projectRoot })
+  const packageJSON = path.join(projectRoot, 'package.json')
+  bugsnag.register(BUGSNAG_KEY, { projectRoot, packageJSON })
 
   transport = new BugsnagTransport({
     name: 'bugsnag',
