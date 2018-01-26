@@ -1,5 +1,7 @@
 'use strict'
 
+// I copied LOGGING_LEVELS from src/helpers/assertLevel.js
+// because this file is going to be deprecated when the bug is solved on winston.
 const LOGGING_LEVELS = [
   'error',
   'warn',
@@ -9,7 +11,7 @@ const LOGGING_LEVELS = [
   'silly',
 ]
 
-// FIX: winston from 2.3.1 until 2.4.0 doesn't log Error objects.
+// FIX: because winston from versions 2.3.1 until 2.4.0 does not log Error objects.
 const cloneErrorProxy = logger => {
   const handler = {
     get: (target, name) => {
