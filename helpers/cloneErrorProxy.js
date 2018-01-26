@@ -11,7 +11,7 @@ const LOGGING_LEVELS = [
   'silly',
 ]
 
-// FIX: because winston from versions 2.3.1 until 2.4.0 does not log Error objects.
+// FIX: because winston from versions 2.3.1 until 2.4.0 do not log Error objects.
 const cloneErrorProxy = logger => {
   const handler = {
     get: (target, name) => {
