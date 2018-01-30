@@ -9,6 +9,5 @@
   "bumpVersion": "patch",
   "commitMessage": "chore: Update dependency {{depName}} to version {{newVersion}}",
   "labels": ["0 For Review"],
-  "pinVersions": false,
-  "schedule": "before 3am on Monday"
+  "pinVersions": false
 }
