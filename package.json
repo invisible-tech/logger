@@ -44,6 +44,6 @@
     "mocha": "^3.5.0",
     "patch-package": "^5.0.0",
     "postinstall-prepare": "^1.0.1",
-    "sinon": "^3.0.0"
+    "sinon": "^4.0.0"
   }
 }
