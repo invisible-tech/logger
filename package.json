@@ -1,6 +1,6 @@
 {
   "name": "@invisible/logger",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Invisible Logging Wrapper",
   "main": "index.js",
   "scripts": {
@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/invisible-tech/logger#readme",
   "dependencies": {
-    "@google-cloud/logging-winston": "^0.5.0",
-    "bugsnag": "^1.12.0",
+    "@google-cloud/logging-winston": "^0.8.0",
+    "bugsnag": "^2.0.0",
     "glob": "^7.1.2",
     "moment": "^2.18.1",
     "winston": "^2.4.0",
@@ -39,11 +39,11 @@
   },
   "devDependencies": {
     "@invisible/eslint-config": "^1.1.2",
-    "@invisible/publish": "^1.1.6",
+    "@invisible/publish": "^2.0.0",
     "eslint": "^4.7.2",
-    "mocha": "^3.5.0",
+    "mocha": "^5.0.0",
     "patch-package": "^5.0.0",
     "postinstall-prepare": "^1.0.1",
-    "sinon": "^3.0.0"
+    "sinon": "^4.0.0"
   }
 }
