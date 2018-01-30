@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@invisible/eslint-config": "^1.1.2",
-    "@invisible/publish": "^1.1.6",
+    "@invisible/publish": "^2.0.0",
     "eslint": "^4.7.2",
     "mocha": "^3.5.0",
     "patch-package": "^5.0.0",
