@@ -1,3 +1,14 @@
 {
-  "pinVersions": false
+  "all": {
+    "description": "Group all updates together",
+    "groupName": "all",
+    "lockFileMaintenance": {
+      "enabled": false
+    }
+  },
+  "bumpVersion": "patch",
+  "commitMessage": "chore: Update dependency {{depName}} to version {{newVersion}}",
+  "labels": ["0 For Review"],
+  "pinVersions": false,
+  "schedule": "before 3am on Monday"
 }
