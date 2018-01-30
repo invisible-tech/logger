@@ -1,13 +1,7 @@
 {
-  "all": {
-    "description": "Group all updates together",
-    "groupName": "all",
-    "lockFileMaintenance": {
-      "enabled": false
-    }
-  },
   "bumpVersion": "patch",
   "commitMessage": "chore: Update dependency {{depName}} to version {{newVersion}}",
+  "extends": ["group:all"],
   "labels": ["0 For Review"],
   "pinVersions": false
 }
