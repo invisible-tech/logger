@@ -7,7 +7,7 @@
     "lint": "eslint *.js **/*.js",
     "pretest": "npm run lint",
     "test": "NODE_ENV=test mocha $(find test -name '*.spec.js')",
-    "posttest": "assert-version-bump",
+    "posttest": "assert-version-bump && assert-changelog-update",
     "prepare": "patch-package"
   },
   "repository": {
@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/invisible-tech/logger#readme",
   "dependencies": {
+    "@invisible/changelog-update": "^1.1.0",
     "bugsnag": "^1.12.0",
     "glob": "^7.1.2",
     "moment": "^2.18.1",
