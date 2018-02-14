@@ -25,7 +25,11 @@ if (shouldLog && TIMBER_KEY) {
   transport = new (winston.transports.Console)({
     name: 'console',
     level: TIMBER_LEVEL,
-    formatter: timber.formatters.Winston,
+    formatter: options => {
+      // When we log errors, options.message comes as blank and it causes errors
+      const message = options.message || options.meta.message
+      return timber.formatters.Winston({ ...options, message })
+    },
   })
 } else if (shouldLog) {
   transport = new (winston.transports.Console)({
