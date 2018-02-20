@@ -9,6 +9,7 @@ const transports = glob.sync('./transports/*.js', { cwd: __dirname })
   .filter(isTransport)
 
 const logger = new (winston.Logger)({
+  exitOnError: false,
   transports,
 })
 
