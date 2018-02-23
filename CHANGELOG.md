@@ -1,3 +1,6 @@
+*v1.1.2*
+> Internal: update dependencies
+
 *v1.1.1*
 > Fix: Blank messages bug when logging an Error object using Timber.io
 
