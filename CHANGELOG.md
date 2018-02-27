@@ -1,3 +1,9 @@
+*v1.1.3*
+> Internal: Update bugsnag version
+> Internal: Move Timber transport to its own file
+> Internal: Add tests for message object types
+> Fix: Timber.io empty message error
+
 *v1.1.2*
 > Internal: update dependencies
 

@@ -2,14 +2,12 @@
 
 const moment = require('moment')
 const winston = require('winston')
-
 const assertLevel = require('./helpers/assertLevel')
 
 const {
   LOGGER_LEVEL = 'info',
   NODE_ENV,
   TIMBER_KEY,
-  TIMBER_LEVEL = 'debug',
 } = process.env
 
 assertLevel(LOGGER_LEVEL, 'LOGGER_LEVEL invalid.')
@@ -18,20 +16,7 @@ const colorize = NODE_ENV === 'development'
 const shouldLog = NODE_ENV !== 'test'
 
 let transport
-if (shouldLog && TIMBER_KEY) {
-  assertLevel(TIMBER_LEVEL, 'TIMBER_LEVEL invalid.')
-  const timber = require('timber')
-  timber.install(new timber.transports.HTTPS(TIMBER_KEY))
-  transport = new (winston.transports.Console)({
-    name: 'console',
-    level: TIMBER_LEVEL,
-    formatter: options => {
-      // When we log errors, options.message comes as blank and it causes errors
-      const message = options.message || options.meta.message
-      return timber.formatters.Winston({ ...options, message })
-    },
-  })
-} else if (shouldLog) {
+if (shouldLog && ! TIMBER_KEY) {
   transport = new (winston.transports.Console)({
     name: 'console',
     level: LOGGER_LEVEL,
