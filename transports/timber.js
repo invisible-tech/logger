@@ -13,10 +13,9 @@ assertLevel(TIMBER_LEVEL, 'BUGSNAG_LEVEL invalid.')
 let transport
 if (TIMBER_KEY) {
   const timber = require('timber')
-  // timber.install(new timber.transports.HTTPS(TIMBER_KEY))
+  timber.install(new timber.transports.HTTPS(TIMBER_KEY))
   transport = new (winston.transports.Console)({
     name: 'timber',
-    // silent: true,
     level: TIMBER_LEVEL,
     formatter: options => {
       // When we log errors, options.message comes as blank and it causes errors
