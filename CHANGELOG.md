@@ -1,3 +1,6 @@
+*v1.1.4*
+> Fix: Inactive Timber.io transport
+
 *v1.1.3*
 > Internal: Update bugsnag version
 > Internal: Move Timber transport to its own file

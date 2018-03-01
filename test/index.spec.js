@@ -18,10 +18,6 @@ describe('library interface', () => {
     logger = require('../')
   })
 
-  it('should load bugsnag transport if BUGSNAG_KEY is defined', () => {
-    sinon.assert.called(bugsnag.register)
-  })
-
   it('should load bugsnag transport with the correct logging level', () => {
     assert.equal(logger.transports.bugsnag.level, process.env.BUGSNAG_LEVEL)
   })
