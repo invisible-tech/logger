@@ -9,7 +9,7 @@ const {
   TIMBER_LEVEL = 'debug',
 } = process.env
 
-assertLevel(TIMBER_LEVEL, 'BUGSNAG_LEVEL invalid.')
+assertLevel(TIMBER_LEVEL, 'TIMBER_LEVEL invalid.')
 
 let transport
 if (TIMBER_KEY) {
