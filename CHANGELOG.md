@@ -1,3 +1,6 @@
+*v1.1.5*
+> Fix: Move `patch-package` and `postinstall-prepare` for dependencies.
+
 *v1.1.4*
 > Fix: Inactive Timber.io transport
 
