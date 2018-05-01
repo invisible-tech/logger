@@ -1,3 +1,6 @@
+*v1.2.0*
+> Feat: Add Loggly.com transport
+
 *v1.1.5*
 > Fix: Move `patch-package` and `postinstall-prepare` for dependencies.
 
