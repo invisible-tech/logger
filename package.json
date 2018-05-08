@@ -1,13 +1,13 @@
 {
   "name": "@invisible/logger",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Invisible Logging Wrapper",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint *.js **/*.js",
+    "lint": "eslint --cache -f node_modules/eslint-formatter-pretty --ignore-path .gitignore .",
     "pretest": "npm run lint",
     "test": "NODE_ENV=test mocha $(find test -name '*.spec.js')",
-    "posttest": "assert-version-bump && assert-changelog-update",
+    "posttest": "assert-version-bump && assert-changelog-update --quiet && nsp check --threshold 5",
     "prepare": "patch-package"
   },
   "repository": {
@@ -45,6 +45,7 @@
     "@invisible/publish": "^2.0.0",
     "eslint": "^4.7.2",
     "mocha": "^5.0.0",
+    "nsp": "^2.8.1",
     "sinon": "^4.0.0"
   }
 }

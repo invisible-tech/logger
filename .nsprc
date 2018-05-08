@@ -1,0 +1,8 @@
+{
+  "exceptions": [
+    // This is a low CVSS and we do not expose patch-package API.
+    "https://nodesecurity.io/advisories/612",    
+    "https://nodesecurity.io/advisories/611",
+    "https://nodesecurity.io/advisories/594"
+  ]
+}

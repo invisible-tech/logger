@@ -1,3 +1,6 @@
+*v1.1.6*
+> Internal: add `nsp` and exceptions for `deep-extend` Prototype Pollution vulnerability (Low CVSS).
+
 *v1.1.5*
 > Fix: Move `patch-package` and `postinstall-prepare` for dependencies.
 
