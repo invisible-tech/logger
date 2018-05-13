@@ -28,9 +28,9 @@ The defaule logging level is `info`, but you can use the `LOGGER_LEVEL` environm
 To use bugsnag, just define `BUGSNAG_KEY` environment variable.
 You can also use the `BUGSNAG_LEVEL` environment variable to set the logging level.
 
-### Google Logger
-Only worsk in production.
-Logging level also specified through the `LOGGER_LEVEL` environment variable.
+### Loggly Logger
+To use Loggly, just define `LOGGLY_TOKEN` and `LOGGLY_SUBDOMAIN` environment variable.
+You can also use the `LOGGLY_LEVEL` environment variable to set the logging level.
 
 ### Additional Transports
 

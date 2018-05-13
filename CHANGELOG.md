@@ -1,3 +1,6 @@
+*v1.2.0*
+> Feat: Add Loggly.com transport
+
 *v1.1.6*
 > Internal: add `nsp` and exceptions for `deep-extend` Prototype Pollution vulnerability (Low CVSS).
 

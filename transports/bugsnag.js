@@ -1,8 +1,8 @@
 'use strict'
 
 const path = require('path')
-const bugsnag = require('bugsnag')
 const { BugsnagTransport } = require('winston-bugsnag')
+const bugsnag = require('bugsnag')
 
 const assertLevel = require('./helpers/assertLevel')
 
