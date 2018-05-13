@@ -4,7 +4,6 @@ const assert = require('assert')
 const bugsnag = require('bugsnag')
 const sinon = require('sinon')
 
-
 describe('library interface', () => {
   let logger
 
@@ -15,7 +14,7 @@ describe('library interface', () => {
   process.env.TIMBER_KEY = 'fake'
 
   it('it should load', () => {
-    logger = require('../')
+    logger = require('..')
   })
 
   it('should load bugsnag transport with the correct logging level', () => {
