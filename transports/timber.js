@@ -4,24 +4,29 @@ const winston = require('winston')
 const assertLevel = require('./helpers/assertLevel')
 
 const {
-  NODE_ENV,
-  TIMBER_KEY,
+  LOGGER_TIMBER,
   TIMBER_LEVEL = 'debug',
 } = process.env
 
 assertLevel(TIMBER_LEVEL, 'TIMBER_LEVEL invalid.')
 
+const dropLineBreak = string => (
+  string.endsWith('\n')
+    ? string.substring(0, string.length - 1)
+    : string
+)
+
 let transport
-if (TIMBER_KEY) {
+if (LOGGER_TIMBER) {
   const timber = require('timber')
-  if (NODE_ENV !== 'test') timber.install(new timber.transports.HTTPS(TIMBER_KEY))
   transport = new (winston.transports.Console)({
     name: 'timber',
     level: TIMBER_LEVEL,
     formatter: options => {
       // When we log errors, options.message comes as blank and it causes errors
       const message = options.message || options.meta.message || 'No message'
-      return timber.formatters.Winston({ ...options, message })
+      const formatted = timber.formatters.Winston({ ...options, message })
+      return dropLineBreak(formatted)
     },
   })
 }
