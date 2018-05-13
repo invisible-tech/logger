@@ -1,3 +1,6 @@
+*v1.2.1*
+> Fix: Set up Timber transport to be used with Heroku drains. This sets up a normal console transport with the Timber formatter.
+
 *v1.2.0*
 > Feat: Add Loggly.com transport
 
