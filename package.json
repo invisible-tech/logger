@@ -1,6 +1,6 @@
 {
   "name": "@invisible/logger",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Invisible Logging Wrapper",
   "main": "index.js",
   "scripts": {

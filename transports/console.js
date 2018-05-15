@@ -7,16 +7,16 @@ const assertLevel = require('./helpers/assertLevel')
 const {
   LOGGER_LEVEL = 'info',
   NODE_ENV,
-  TIMBER_KEY,
+  LOGGER_TIMBER,
 } = process.env
 
 assertLevel(LOGGER_LEVEL, 'LOGGER_LEVEL invalid.')
 
 const colorize = NODE_ENV === 'development'
-const shouldLog = NODE_ENV !== 'test'
+const shouldLogToConsole = (NODE_ENV !== 'test') && ! LOGGER_TIMBER
 
 let transport
-if (shouldLog && ! TIMBER_KEY) {
+if (shouldLogToConsole) {
   transport = new (winston.transports.Console)({
     name: 'console',
     level: LOGGER_LEVEL,
