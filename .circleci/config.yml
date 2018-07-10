@@ -48,6 +48,9 @@ jobs:
       - attach_workspace:
           at: ~/project
       - run:
+          name: Publish NPM Package
+          command: ./node_modules/.bin/publish
+      - run:
           name: Publish Changelog
           command: ./node_modules/.bin/push-changelog-update || true
 
