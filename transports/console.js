@@ -7,33 +7,25 @@ const assertLevel = require('./helpers/assertLevel')
 const {
   LOGGER_LEVEL = 'info',
   NODE_ENV,
-  LOGGER_TIMBER,
 } = process.env
+const colorize = NODE_ENV === 'development'
 
 assertLevel(LOGGER_LEVEL, 'LOGGER_LEVEL invalid.')
 
-const colorize = NODE_ENV === 'development'
-const shouldLogToConsole = (NODE_ENV !== 'test') && ! LOGGER_TIMBER
+module.exports = new (winston.transports.Console)({
+  name: 'console',
+  level: LOGGER_LEVEL,
+  timestamp: () => moment().format(),
+  formatter: options => {
+    const { message } = options
+    const meta = (options.meta && Object.keys(options.meta).length)
+      ? `\n${JSON.stringify(options.meta, null, 2)}`
+      : ''
 
-let transport
-if (shouldLogToConsole) {
-  transport = new (winston.transports.Console)({
-    name: 'console',
-    level: LOGGER_LEVEL,
-    timestamp: () => moment().format(),
-    formatter: options => {
-      const { message } = options
-      const meta = (options.meta && Object.keys(options.meta).length)
-        ? `\n${JSON.stringify(options.meta, null, 2)}`
-        : ''
+    let msg = `${options.timestamp()} ${options.level.toUpperCase()} ${message} ${meta}`
 
-      let msg = `${options.timestamp()} ${options.level.toUpperCase()} ${message} ${meta}`
+    if (colorize) msg = winston.config.colorize(options.level, msg)
 
-      if (colorize) msg = winston.config.colorize(options.level, msg)
-
-      return msg
-    },
-  })
-}
-
-module.exports = transport
+    return msg
+  },
+})

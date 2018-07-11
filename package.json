@@ -32,7 +32,6 @@
   "dependencies": {
     "@invisible/changelog-update": "^1.1.0",
     "bugsnag": "^2.1.3",
-    "glob": "^7.1.2",
     "moment": "^2.18.1",
     "patch-package": "^5.0.0",
     "postinstall-prepare": "^1.0.1",
@@ -44,6 +43,7 @@
   "devDependencies": {
     "@invisible/eslint-config": "^1.1.2",
     "@invisible/publish": "^2.0.0",
+    "decache": "^4.4.0",
     "eslint": "^4.7.2",
     "mocha": "^5.0.0",
     "nsp": "^2.8.1",
