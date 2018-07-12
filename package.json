@@ -24,7 +24,7 @@
     "name": "Invisible Technologies Inc.",
     "url": "https://github.com/invisible-tech"
   },
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/invisible-tech/logger/issues"
   },
