@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --cache -f node_modules/eslint-formatter-pretty --ignore-path .gitignore .",
-    "pretest": "npm run lint",
+    "pretest": "yarn lint",
     "test": "NODE_ENV=test mocha $(find test -name '*.spec.js')",
     "posttest": "assert-version-bump && assert-changelog-update --quiet && nsp check --threshold 5",
     "prepare": "patch-package"
@@ -20,8 +20,8 @@
     "wrapper"
   ],
   "author": {
-    "email": "tng@invisible.email",
-    "name": "Invisible Technologies",
+    "email": "engineering@invisible.email",
+    "name": "Invisible Technologies Inc.",
     "url": "https://github.com/invisible-tech"
   },
   "license": "ISC",
