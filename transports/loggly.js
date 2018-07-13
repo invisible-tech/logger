@@ -1,6 +1,7 @@
 'use strict'
 
-const Loggly = require('winston-loggly-bulk')
+require('winston-loggly-bulk')
+const winston = require('winston')
 
 const {
   LOGGLY_TOKEN,
@@ -8,13 +9,8 @@ const {
   LOGGLY_LEVEL = 'warn',
 } = process.env
 
-let transport
-if (LOGGLY_TOKEN) {
-  transport = new Loggly({
-    subdomain: LOGGLY_SUBDOMAIN,
-    token: LOGGLY_TOKEN,
-    level: LOGGLY_LEVEL,
-  })
-}
-
-module.exports = transport
+module.exports = new winston.transports.Loggly({
+  subdomain: LOGGLY_SUBDOMAIN,
+  token: LOGGLY_TOKEN,
+  level: LOGGLY_LEVEL,
+})

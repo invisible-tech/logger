@@ -14,16 +14,11 @@ const {
 
 assertLevel(BUGSNAG_LEVEL, 'BUGSNAG_LEVEL invalid.')
 
-let transport
-if (BUGSNAG_KEY) {
-  const projectRoot = process.cwd()
-  const packageJSON = path.join(projectRoot, 'package.json')
-  if (NODE_ENV !== 'test') bugsnag.register(BUGSNAG_KEY, { projectRoot, packageJSON })
+const projectRoot = process.cwd()
+const packageJSON = path.join(projectRoot, 'package.json')
+if (NODE_ENV !== 'test') bugsnag.register(BUGSNAG_KEY, { projectRoot, packageJSON })
 
-  transport = new BugsnagTransport({
-    name: 'bugsnag',
-    level: BUGSNAG_LEVEL,
-  })
-}
-
-module.exports = transport
+module.exports = new BugsnagTransport({
+  name: 'bugsnag',
+  level: BUGSNAG_LEVEL,
+})

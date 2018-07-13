@@ -1,3 +1,7 @@
+*v1.2.3*
+> Feat: Open-source it under the MIT license.
+> Internal: Refactor logger and transports to be loaded as needed.
+
 *v1.2.2*
 > Internal: Update CircleCI to version 2
 
