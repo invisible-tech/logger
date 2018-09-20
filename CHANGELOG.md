@@ -1,3 +1,6 @@
+*v1.2.4*
+> Internal: Update dependencies
+
 *v1.2.3*
 > Feat: Open-source it under the MIT license.
 > Internal: Refactor logger and transports to be loaded as needed.
