@@ -2,17 +2,16 @@
 
 const winston = require('winston')
 
-const shouldLogToConsole = (process.env.NODE_ENV !== 'test')
-const transports = []
-
-if (shouldLogToConsole && process.env.LOGGER_TIMBER === 'true') transports.push(require('./transports/timber'))
-else if (shouldLogToConsole) transports.push(require('./transports/console'))
-if (process.env.BUGSNAG_KEY) transports.push(require('./transports/bugsnag'))
-if (process.env.LOGGLY_TOKEN) transports.push(require('./transports/loggly'))
+const isTest = (process.env.NODE_ENV === 'test')
+const transports = [
+  (process.env.LOGGER_TIMBER === 'true') ?
+    require('./transports/timber') :
+    require('./transports/console'),
+]
 
 const logger = new (winston.Logger)({
   exitOnError: false,
-  transports,
+  transports: isTest ? undefined : transports,
 })
 
 module.exports = logger

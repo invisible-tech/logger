@@ -24,14 +24,6 @@ Make sure to set `LOGGER_LEVEL = silly` on your development environment.
 Will only be colorized in development.
 The default logging level is `info`, but you can use the `LOGGER_LEVEL` environment variable to adjust the logging level.
 
-### Bugsnag
-To use bugsnag, just define `BUGSNAG_KEY` environment variable.
-You can also use the `BUGSNAG_LEVEL` environment variable to set the logging level.
-
-### Loggly Logger
-To use Loggly, just define `LOGGLY_TOKEN` and `LOGGLY_SUBDOMAIN` environment variable.
-You can also use the `LOGGLY_LEVEL` environment variable to set the logging level.
-
 ### Timber
 To use Timber, you'll need to define `LOGGER_TIMBER` as `true` in your environment variable and redirect the drain of your Heroku app to the drain address in Timber.
 You can also use the `TIMBER_LEVEL` environment variable to set the logging level.
