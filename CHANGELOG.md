@@ -1,3 +1,7 @@
+*v2.0.0*
+> Internal: Remove unused Loggly and Bugsnag
+> Internal: Remove unecessary patch
+
 *v1.2.3*
 > Feat: Open-source it under the MIT license.
 > Internal: Refactor logger and transports to be loaded as needed.
