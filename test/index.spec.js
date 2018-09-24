@@ -2,15 +2,12 @@
 
 const assert = require('assert')
 const decache = require('decache')
-const bugsnag = require('bugsnag')
-const sinon = require('sinon')
 
 const deepCopy = obj => JSON.parse(JSON.stringify(obj))
 assert.undefined = (value, ...args) => assert.strictEqual(value, undefined, ...args)
 
 describe('library interface', () => {
   const cleanEnv = deepCopy(process.env)
-  sinon.stub(bugsnag, 'register').returns()
 
   beforeEach(() => {
     decache('..')
@@ -77,54 +74,6 @@ describe('library interface', () => {
       const logger = require('..')
 
       assert.undefined(logger.transports.console)
-    })
-  })
-
-  describe('transports/loggly', () => {
-    it('should not load if LOGGLY_TOKEN is undefined', () => {
-      const logger = require('..')
-
-      assert.undefined(logger.transports.loggly)
-    })
-
-    it('should load if LOGGLY_TOKEN is defined', () => {
-      process.env.LOGGLY_TOKEN = 'fake'
-      process.env.LOGGLY_SUBDOMAIN = 'fake'
-      const logger = require('..')
-
-      assert(logger.transports.loggly)
-    })
-
-    it('should load with the correct logging level', () => {
-      process.env.LOGGLY_TOKEN = 'fake'
-      process.env.LOGGLY_SUBDOMAIN = 'fake'
-      process.env.LOGGLY_LEVEL = 'silly'
-      const logger = require('..')
-
-      assert.equal(logger.transports.loggly.level, process.env.LOGGLY_LEVEL)
-    })
-  })
-
-  describe('transports/bugsnag', () => {
-    it('should not load if BUGSNAG_KEY is undefined', () => {
-      const logger = require('..')
-
-      assert.undefined(logger.transports.bugsnag)
-    })
-
-    it('should load if BUGSNAG_KEY is defined', () => {
-      process.env.BUGSNAG_KEY = 'fake'
-      const logger = require('..')
-
-      assert(logger.transports.bugsnag)
-    })
-
-    it('should load with the correct logging level', () => {
-      process.env.BUGSNAG_KEY = 'fake'
-      process.env.BUGSNAG_LEVEL = 'silly'
-      const logger = require('..')
-
-      assert.equal(logger.transports.bugsnag.level, process.env.BUGSNAG_LEVEL)
     })
   })
 })
