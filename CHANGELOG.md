@@ -1,3 +1,6 @@
+*v2.1.0*
+> Internal: Serialize error objects
+
 *v2.0.0*
 > Internal: Remove unused Loggly and Bugsnag
 > Internal: Remove unecessary patch
