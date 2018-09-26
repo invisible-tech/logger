@@ -1,7 +1,9 @@
 'use strict'
 
 const winston = require('winston')
+const serializeError = require('serialize-error')
 const timber = require('timber')
+
 const assertLevel = require('./helpers/assertLevel')
 
 const {
@@ -22,7 +24,10 @@ module.exports = new (winston.transports.Console)({
   formatter: options => {
     // When we log errors, options.message comes as blank and it causes errors
     const message = options.message || options.meta.message || 'No message'
-    const formatted = timber.formatters.Winston({ ...options, message })
+    // Serialize eventual error objecs
+    // https://github.com/timberio/timber-node/issues/87
+    const sanitized = serializeError(options)
+    const formatted = timber.formatters.Winston({ ...sanitized, message })
     return dropLineBreak(formatted)
   },
 })
