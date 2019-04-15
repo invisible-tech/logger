@@ -1,3 +1,6 @@
+*v2.1.2*
+> Internal: remove unneeded files
+
 *v2.1.1*
 > Feature: allow logging in tests when process.env.LOGGER_ENABLED_IN_TEST === 'true'
 
