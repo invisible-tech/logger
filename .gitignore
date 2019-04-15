@@ -59,3 +59,5 @@ typings/
 
 # Each project can have an ignore subdirectory
 ignore
+
+*.sublime-*
