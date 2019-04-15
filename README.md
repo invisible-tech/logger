@@ -24,6 +24,8 @@ Make sure to set `LOGGER_LEVEL = silly` on your development environment.
 Will only be colorized in development.
 The default logging level is `info`, but you can use the `LOGGER_LEVEL` environment variable to adjust the logging level.
 
+Disabled by default in `test` env, but can be overriden if `LOGGER_ENABLED_IN_TEST` is `true`.
+
 ### Timber
 To use Timber, you'll need to define `LOGGER_TIMBER` as `true` in your environment variable and redirect the drain of your Heroku app to the drain address in Timber.
 You can also use the `TIMBER_LEVEL` environment variable to set the logging level.

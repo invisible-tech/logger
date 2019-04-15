@@ -1,3 +1,6 @@
+*v2.1.1*
+> Feature: allow logging in tests when process.env.LOGGER_ENABLED_IN_TEST === 'true'
+
 *v2.1.0*
 > Internal: Serialize error objects
 
