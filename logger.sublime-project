@@ -1,0 +1,64 @@
+{
+  "folders":
+  [
+    {
+      "index_exclude_patterns": [
+        "node_modules/**"
+      ],
+      "binary_file_patterns": [
+        "node_modules/**"
+      ],
+      "file_exclude_patterns":
+      [
+        "*.bak",
+        "*.BASE",
+        "*.LOCAL",
+        "*.orig",
+        "*.log",
+        "*.REMOTE",
+        "*.sublime-workspace",
+        "*~",
+        "*.tar",
+        "*.dump",
+        ".apdisk",
+        ".AppleDB",
+        ".AppleDesktop",
+        ".AppleDouble",
+        ".cache-require-paths.json",
+        ".DocumentRevisions-V100",
+        ".DS_Store",
+        ".eslint-cache",
+        ".eslintcache",
+        ".fseventsd",
+        ".LSOverride",
+        ".nyc_output",
+        ".Spotlight-V100",
+        ".TemporaryItems",
+        ".tern-port",
+        ".Trashes",
+        ".VolumeIcon.icns",
+        ".vs",
+        "complexity.md",
+        "Icon*",
+        "lcov.info",
+        "Network Trash Folder",
+        "npm-debug.log*",
+        "Temporary Items",
+        "yarn-error.log"
+      ],
+      "folder_exclude_patterns":
+      [
+        ".bak",
+        ".nyc_output",
+        "assets",
+        "complexity",
+        "coverage",
+        "docs",
+        "tmp",
+        "dist",
+        "build"
+      ],
+      "path": "."
+    }
+  ]
+}
