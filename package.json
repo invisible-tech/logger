@@ -29,7 +29,6 @@
   },
   "homepage": "https://github.com/invisible-tech/logger#readme",
   "dependencies": {
-    "@invisible/changelog-update": "^1.1.0",
     "moment": "^2.18.1",
     "serialize-error": "^2.1.0",
     "timber": "^3.1.1",
@@ -37,6 +36,7 @@
   },
   "devDependencies": {
     "@invisible/eslint-config": "^1.1.2",
+    "@invisible/changelog-update": "^1.1.0",
     "@invisible/publish": "^2.0.0",
     "decache": "^4.4.0",
     "eslint": "^4.7.2",
