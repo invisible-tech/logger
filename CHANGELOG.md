@@ -1,3 +1,6 @@
+*v2.3.0*
+> Fix: Improve performance by serializing objects that contain circular references
+
 *v2.1.2*
 > Internal: remove unneeded files
 
