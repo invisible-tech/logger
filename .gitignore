@@ -61,3 +61,6 @@ typings/
 ignore
 
 *.sublime-*
+
+# vscode history extension
+.history/

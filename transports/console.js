@@ -3,6 +3,7 @@
 const moment = require('moment')
 const winston = require('winston')
 const assertLevel = require('./helpers/assertLevel')
+const serialize = require('./helpers/serialize')
 
 const {
   LOGGER_LEVEL = 'info',
@@ -18,6 +19,8 @@ module.exports = new (winston.transports.Console)({
   timestamp: () => moment().format(),
   formatter: options => {
     const { message } = options
+    // serialize objects such as SQL models by checking for toJSON
+    options.meta = serialize(options.meta)
     const meta = (options.meta && Object.keys(options.meta).length)
       ? `\n${JSON.stringify(options.meta, null, 2)}`
       : ''
