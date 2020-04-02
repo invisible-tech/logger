@@ -61,3 +61,4 @@ typings/
 ignore
 
 *.sublime-*
+.history

@@ -1,5 +1,5 @@
 {
-  "name": "@invisible/logger",
+  "name": "@invisible-tech/logger",
   "version": "2.2.0",
   "description": "Invisible Logging Wrapper",
   "main": "index.js",
@@ -12,6 +12,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/invisible-tech/logger.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [
     "log",
