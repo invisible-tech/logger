@@ -7,19 +7,13 @@ const timber = require('timber')
 const assertLevel = require('./helpers/assertLevel')
 const serialize = require('./helpers/serialize')
 
-const {
-  TIMBER_LEVEL = 'info',
-} = process.env
+const { TIMBER_LEVEL = 'info' } = process.env
 
 assertLevel(TIMBER_LEVEL, 'TIMBER_LEVEL invalid.')
 
-const dropLineBreak = string => (
-  string.endsWith('\n')
-    ? string.substring(0, string.length - 1)
-    : string
-)
-
-module.exports = new (winston.transports.Console)({
+const dropLineBreak = string =>
+  (string.endsWith('\n') ? string.substring(0, string.length - 1) : string)
+module.exports = new winston.transports.Console({
   name: 'timber',
   level: TIMBER_LEVEL,
   formatter: options => {
