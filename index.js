@@ -10,6 +10,8 @@ const transports = [
     : require('./transports/console'),
 ]
 
+if (process.env.ROLLBAR_ACCESS_TOKEN) transports.unshift(require('./transports/rollbar'))
+
 const logger = new winston.Logger({
   exitOnError: false,
   transports: isTest && ! enabledInTest ? undefined : transports,
