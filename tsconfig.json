@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "typeRoots": [
+            "node_modules/@types",
+        ],
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "target": "es2018",
+        "lib": [
+            "es2018"
+        ],
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": true,
+        "noImplicitReturns": true,
+        "strict": true
+    },
+    "include": [
+        "index.ts",
+        "transports",
+        "test",
+        "types/winston-rollbar.d.ts",
+        "types/types.d.ts"
+    ],
+    "exclude": [
+        "coverage/**/*",
+        "dev/**/*",
+        "deploy/**/*"
+    ]
+}
