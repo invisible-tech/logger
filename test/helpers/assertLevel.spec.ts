@@ -1,8 +1,6 @@
-'use strict'
+import assert from 'assert'
 
-const assert = require('assert')
-
-const assertLevel = require('../../transports/helpers/assertLevel.js')
+import assertLevel from '../../transports/helpers/assertLevel'
 
 describe('assertLevel', () => {
   it('should work with a valid logging level', () => {

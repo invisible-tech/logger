@@ -1,3 +1,8 @@
+*v3.0.0*
+> Refact: Removed winston in favor of direct rollbar usage (better stack trace)
+> Refact: Removed timber transport
+> Feat: Upgraded to winston 3 for fallback console transport
+
 *v2.3.0*
 > Fix: Improve performance by serializing objects that contain circular references
 

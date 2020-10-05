@@ -1,0 +1,52 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    "tsconfigRootDir": "./"
+  },
+  "plugins": [
+    "prettier",
+    "simple-import-sort",
+    "no-only-tests"
+  ],
+  "rules": {
+    "@typescript-eslint/no-extra-semi": "warn",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/member-delimiter-style": 0,
+    "@typescript-eslint/no-empty-interface": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "args": "none",
+        "ignoreRestSiblings": true,
+        "vars": "all"
+      }
+    ],
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "no-warning-comments": "error",
+    "no-console": "error",
+    "prettier/prettier": "error",
+    "simple-import-sort/sort": "error",
+    "no-only-tests/no-only-tests": "error"
+  }
+}

@@ -1,6 +1,9 @@
---colors
+--color
 --check-leaks
---reporter dot
 --timeout 10000
 --ui bdd
---globals ords,__coverage__
+--globals ords,__coverage__,__core-js_shared__,run
+--recursive
+--require ts-node/register
+--watch-extensions ts,tsx
+--exit
