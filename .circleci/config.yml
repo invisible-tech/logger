@@ -7,16 +7,19 @@ jobs:
     steps:
       - checkout
       - restore_cache:
+          name: Restore pnpm Cache
           keys:
-          - v2-dependencies-{{ checksum "yarn.lock" }}
-          - v2-dependencies-
+            - pnpm-20200925b-{{ checksum "pnpm-lock.yaml" }}
+            - pnpm-20200925b-
       - run:
           name: Install Dependencies
-          command: ls && yarn install
+          command: npx pnpm@5 install
       - save_cache:
+          name: Save pnpm Cache
+          key: pnpm-20200925b-{{ checksum "pnpm-lock.yaml" }}
           paths:
-            - node_modules
-          key: v2-dependencies-{{ checksum "yarn.lock" }}
+            - /home/circleci/.pnpm-store/v3
+            - ./node_modules
       - persist_to_workspace:
           root: .
           paths:
@@ -36,7 +39,7 @@ jobs:
           at: ~/project
       - run:
           name: Run Tests
-          command: yarn test
+          command: npx pnpm@5 run test
 
   publish:
     working_directory: ~/project
