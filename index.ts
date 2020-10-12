@@ -12,7 +12,8 @@ const logger = ROLLBAR_ACCESS_TOKEN
   ? rollbar
   : createLogger({
       level: LOGGER_LEVEL,
-      transports: isTest && !enabledInTest ? undefined : transports,
+      transports,
+      silent: isTest && !enabledInTest,
     })
 
 export default logger as winston.Logger

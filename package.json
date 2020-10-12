@@ -1,6 +1,6 @@
 {
   "name": "@invisible/logger",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Invisible Logging Wrapper",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,12 +11,11 @@
     "lint:fix": "prettier --write '*/**/*.{js,ts,tsx,jsx}' && eslint --quiet --cache --fix '*/**/*.{js,ts,tsx}'",
     "pretest": "yarn lint",
     "prepublish": "yarn lint && yarn build",
-    "test": "LOGGER_ENABLED_IN_TEST=true NODE_ENV=test mocha $(find test -name '*.spec.ts')",
+    "test": "LOGGER_ENABLED_IN_TEST=true NODE_ENV=test mocha --config test/mocharc.json $(find test -name '*.spec.ts')",
     "posttest": "assert-version-bump && assert-changelog-update --quiet"
   },
   "engines": {
-    "node": "12.x",
-    "yarn": "1.x"
+    "node": "12.x"
   },
   "repository": {
     "type": "git",
@@ -42,19 +41,19 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
-    "@invisible/changelog-update": "^1.1.0",
-    "@invisible/publish": "^2.0.0",
+    "@invisible/changelog-update": "^1.2.2",
+    "@invisible/publish": "^2.0.4",
     "@types/mocha": "^8.0.3",
-    "@types/node": "^14.11.2",
-    "@typescript-eslint/eslint-plugin": "^4.3.0",
-    "@typescript-eslint/parser": "^4.3.0",
-    "decache": "^4.4.0",
-    "eslint": "^7.10.0",
+    "@types/node": "^14.11.8",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "decache": "^4.6.0",
+    "eslint": "^7.11.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-no-only-tests": "^2.4.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-simple-import-sort": "^5.0.3",
-    "mocha": "^5.0.0",
+    "mocha": "^8.1.3",
     "prettier": "^2.1.2",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3"

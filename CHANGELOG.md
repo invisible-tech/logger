@@ -1,3 +1,7 @@
+*v3.0.2*
+> Chore: updated dependencies and switched to pnpm
+> Fix: silent on tests
+
 *v3.0.0*
 > Refact: Removed winston in favor of direct rollbar usage (better stack trace)
 > Refact: Removed timber transport

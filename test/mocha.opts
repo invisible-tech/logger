@@ -1,9 +1,0 @@
---color
---check-leaks
---timeout 10000
---ui bdd
---globals ords,__coverage__,__core-js_shared__,run
---recursive
---require ts-node/register
---watch-extensions ts,tsx
---exit
