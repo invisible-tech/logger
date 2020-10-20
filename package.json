@@ -4,7 +4,7 @@
   "description": "Invisible Logging Wrapper",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-    "scripts": {
+  "scripts": {
     "build": "rm -rf dist && tsc",
     "check-types": "tsc --noEmit --noErrorTruncation",
     "lint": "prettier --check '*/**/*.{js,ts,tsx,jsx}' && eslint --quiet --cache '*/**/*.{js,ts,tsx}'",
