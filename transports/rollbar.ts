@@ -2,7 +2,12 @@ import Rollbar from 'rollbar'
 
 type RollbarLevel = 'info' | 'error' | 'debug' | 'warning' | 'critical'
 
-const { ROLLBAR_LEVEL = 'warning', ROLLBAR_ACCESS_TOKEN, NODE_ENV } = process.env
+const {
+  ROLLBAR_LEVEL = 'warning',
+  ROLLBAR_SERVER_ROOT = '/app/build/',
+  ROLLBAR_ACCESS_TOKEN,
+  NODE_ENV,
+} = process.env
 
 const rollbarConfig: Rollbar.Configuration = {
   accessToken: ROLLBAR_ACCESS_TOKEN,
@@ -12,6 +17,11 @@ const rollbarConfig: Rollbar.Configuration = {
   captureUncaught: true,
   captureUnhandledRejections: true,
   verbose: true,
+  payload: {
+    server: {
+      root: ROLLBAR_SERVER_ROOT,
+    },
+  },
 }
 const rollbar = new Rollbar(rollbarConfig)
 
