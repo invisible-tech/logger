@@ -1,6 +1,6 @@
 {
   "name": "@invisible/logger",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Invisible Logging Wrapper",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,7 @@
     "posttest": "assert-version-bump && assert-changelog-update --quiet"
   },
   "engines": {
-    "node": "12.x"
+    "node": ">=12"
   },
   "repository": {
     "type": "git",
