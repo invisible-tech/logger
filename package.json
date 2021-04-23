@@ -15,7 +15,7 @@
     "posttest": "assert-version-bump && assert-changelog-update --quiet"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "repository": {
     "type": "git",
@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/invisible-tech/logger#readme",
   "dependencies": {
-    "rollbar": "^2.19.3",
+    "rollbar": "^2.21.1",
     "winston": "^3.3.3"
   },
   "devDependencies": {

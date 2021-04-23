@@ -16,6 +16,7 @@ const rollbarConfig: Rollbar.Configuration = {
   stackTraceLimit: 50,
   captureUncaught: true,
   captureUnhandledRejections: true,
+  ignoredMessages: process.env.IGNORED_ERRORS?.split(','),
   verbose: true,
   payload: {
     server: {
