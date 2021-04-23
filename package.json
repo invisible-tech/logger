@@ -1,6 +1,6 @@
 {
   "name": "@invisible/logger",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Invisible Logging Wrapper",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
