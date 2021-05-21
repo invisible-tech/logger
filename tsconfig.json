@@ -1,14 +1,16 @@
 {
     "compilerOptions": {
+        "jsx": "react-jsx",
         "typeRoots": [
             "node_modules/@types",
+        ],
+        "types": [
+            "node"
         ],
         "module": "commonjs",
         "esModuleInterop": true,
         "target": "es2018",
-        "lib": [
-            "es2018"
-        ],
+        "lib": ["dom"],
         "moduleResolution": "node",
         "sourceMap": true,
         "outDir": "dist",
@@ -21,9 +23,8 @@
     },
     "include": [
         "index.ts",
-        "transports",
+        "config/env.ts",
         "test",
-        "types/winston-rollbar.d.ts",
         "types/types.d.ts"
     ],
     "exclude": [
