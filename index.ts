@@ -24,17 +24,6 @@ const logLevelIndex = SEVERITY_ARRAY.indexOf(LOG_LEVEL)
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const init = () => {
-  console.log({
-    dsn: SENTRY_DSN,
-    release: GIT_COMMIT,
-    environment: ENV,
-    logLevel: logLevelIndex,
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    integrations: process['browser']
-      ? [new Integrations.BrowserTracing()]
-      : [new Integrations.Express()],
-  })
   if (SENTRY_DSN)
     Sentry.init({
       dsn: SENTRY_DSN,
