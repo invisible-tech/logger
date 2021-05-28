@@ -44,7 +44,7 @@ interface User extends Omit<Sentry.User, 'id'> {
   name?: string
 }
 
-type Meta = Record<string, unknown>
+type Meta = Record<string, unknown> | Error
 
 export const identify = (user: User) => {
   if (!user.id && !user.email)
