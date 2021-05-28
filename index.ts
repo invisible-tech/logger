@@ -5,6 +5,8 @@ import { Integrations } from '@sentry/tracing'
 
 export const LOG_LEVEL = (process.env.LOG_LEVEL as Severity) ?? Severity.Warning
 export const SENTRY_DSN = process.env.SENTRY_DSN ?? process.env.NEXT_PUBLIC_SENTRY_DSN
+export const GIT_COMMIT = process.env.VERCEL_GIT_COMMIT_SHA ?? 'development'
+export const ENV = process.env.VERCEL_ENV ?? 'development'
 
 const SEVERITY_ARRAY = [
   Severity.Debug,
@@ -18,11 +20,27 @@ const SEVERITY_ARRAY = [
 
 export const { addBreadcrumb, addGlobalEventProcessor, captureEvent } = Sentry
 
+const logLevelIndex = SEVERITY_ARRAY.indexOf(LOG_LEVEL)
+
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const init = () => {
+  console.log({
+    dsn: SENTRY_DSN,
+    release: GIT_COMMIT,
+    environment: ENV,
+    logLevel: logLevelIndex,
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    integrations: process['browser']
+      ? [new Integrations.BrowserTracing()]
+      : [new Integrations.Express()],
+  })
   if (SENTRY_DSN)
     Sentry.init({
       dsn: SENTRY_DSN,
+      release: GIT_COMMIT,
+      environment: ENV,
+      logLevel: logLevelIndex,
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       integrations: process['browser']
@@ -48,7 +66,6 @@ export const identify = (user: User) => {
   })
 }
 
-const logLevelIndex = SEVERITY_ARRAY.indexOf(LOG_LEVEL)
 const logMessage = (msg: string, severity: Severity = Severity.Info, meta: Meta = {}) => {
   const severityIndex = SEVERITY_ARRAY.indexOf(severity)
   if (meta instanceof Error) {
