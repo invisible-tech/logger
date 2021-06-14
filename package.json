@@ -1,6 +1,6 @@
 {
   "name": "@invisible/logger",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Invisible Logging Wrapper",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -39,8 +39,8 @@
   },
   "homepage": "https://github.com/invisible-tech/logger#readme",
   "dependencies": {
-    "@sentry/nextjs": "^6.3.5",
-    "@sentry/tracing": "^6.3.5",
+    "@sentry/nextjs": "^6.7",
+    "@sentry/tracing": "^6.7",
     "next": "^10.2.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
