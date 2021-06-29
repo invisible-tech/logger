@@ -33,6 +33,9 @@ export const init = () => {
       environment: ENV,
       logLevel: logLevelIndex,
       sampleRate: parseFloat(SENTRY_SAMPLE_RATE),
+      // beforeSend to not proactively filter any potential PII data.
+      // Reference: https://docs.sentry.io/platforms/node/data-management/sensitive-data/#scrubbing-data
+      beforeSend: (event: Sentry.Event) => event,
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       integrations: process['browser']
