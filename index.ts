@@ -8,7 +8,7 @@ export const SENTRY_DSN = process.env.SENTRY_DSN ?? process.env.NEXT_PUBLIC_SENT
 export const SENTRY_SAMPLE_RATE =
   process.env.SENTRY_SAMPLE_RATE ?? process.env.NEXT_PUBLIC_SENTRY_SAMPLE_RATE ?? '1'
 export const GIT_COMMIT = process.env.VERCEL_GIT_COMMIT_SHA ?? 'development'
-export const ENV = process.env.VERCEL_ENV ?? 'development'
+export const ENV = process.env.VERCEL_ENV ?? process.env.NEXT_PUBLIC_VERCEL_ENV ?? 'development'
 
 const SEVERITY_ARRAY = [
   Severity.Debug,
