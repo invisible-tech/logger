@@ -5,8 +5,7 @@ import { Integrations } from '@sentry/tracing'
 
 export const LOG_LEVEL = (process.env.LOG_LEVEL as Severity) ?? Severity.Warning
 export const SENTRY_DSN = process.env.SENTRY_DSN ?? process.env.NEXT_PUBLIC_SENTRY_DSN
-export const SENTRY_SAMPLE_RATE =
-  process.env.SENTRY_SAMPLE_RATE ?? process.env.NEXT_PUBLIC_SENTRY_SAMPLE_RATE ?? '1'
+export const SENTRY_SAMPLE_RATE = process.env.NEXT_PUBLIC_SENTRY_SAMPLE_RATE ?? '0.2'
 export const GIT_COMMIT = process.env.VERCEL_GIT_COMMIT_SHA ?? 'development'
 export const ENV = process.env.VERCEL_ENV ?? process.env.NEXT_PUBLIC_VERCEL_ENV ?? 'development'
 
