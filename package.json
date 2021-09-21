@@ -39,8 +39,8 @@
   },
   "homepage": "https://github.com/invisible-tech/logger#readme",
   "dependencies": {
-    "@sentry/nextjs": "^6.10.0",
-    "@sentry/tracing": "^6.10.0",
+    "@sentry/nextjs": "^6.13.1",
+    "@sentry/tracing": "^6.13.1",
     "next": "^10.2.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
