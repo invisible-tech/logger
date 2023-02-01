@@ -15,7 +15,7 @@
     "posttest": "assert-version-bump && assert-changelog-update --quiet"
   },
   "engines": {
-    "node": ">=14"
+    "node": "18.x"
   },
   "files": [
     "dist"
